@@ -6,8 +6,8 @@ RUN apt-get -y install redis-server
 # Add and install Python modules
 RUN mkdir -p /src
 RUN pip install flask==0.9
+RUN pip install redis==2.10.3
 ADD app.py /src/app.py
-
 
 # Bundle app source
 EXPOSE 5000
