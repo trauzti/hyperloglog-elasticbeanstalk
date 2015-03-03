@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>HyperLogLog with words</title>
+</head>
+<body>
+{% if error %}
+{{ error }}
+{% else %}
+{% if count %}
+Number of unique words so far is {{ count }}
+{% else %}
+Number of unique words so far is 0.
+{% endif %}
+{% endif %}
+<form action="/" method="post">
+<input style="width:200px;" placeholder="Type in a word for the HyperLogLog" type="string" name="word">
+</form>
+</body>
+</html>
