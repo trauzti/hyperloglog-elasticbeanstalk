@@ -9,4 +9,11 @@
       "ContainerPort": "5000"
     }
   ],
+  "Volumes": [
+    {
+      "HostDirectory": "/mnt",
+      "ContainerDirectory": "/mnt"
+    }
+  ],
+  "Logging": "/var/log/sway"
 }
