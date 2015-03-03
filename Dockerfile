@@ -3,6 +3,7 @@ FROM dockerfile/python
 RUN apt-get update
 RUN apt-get -y install redis-server 
 
+RUN redis-server --daemonize yes
 # Add and install Python modules
 RUN mkdir -p /src
 RUN pip install flask==0.9
