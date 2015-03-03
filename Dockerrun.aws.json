@@ -15,5 +15,5 @@
       "ContainerDirectory": "/mnt"
     }
   ],
-  "Logging": "/var/log/sway"
+  "Logging": "/var/log/"
 }
