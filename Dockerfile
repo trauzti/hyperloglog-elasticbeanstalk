@@ -5,13 +5,12 @@ RUN sudo apt-add-repository ppa:chris-lea/redis-server
 RUN apt-get update
 RUN apt-get -y install redis-server 
 
-RUN sleep 30s && /etc/init.d/redis-server start
-# Add and install Python modules
-RUN mkdir -p /src
 RUN pip install flask==0.9
 RUN pip install redis==2.10.3
-ADD app.py /src/app.py
+
+RUN mkdir -p /src
+ADD . /src/
 
 # Bundle app source
 EXPOSE 5000
-CMD ["python", "/src/app.py"]
+CMD ["/src/start.sh"]
