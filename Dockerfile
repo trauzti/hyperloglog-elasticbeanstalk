@@ -5,8 +5,7 @@ RUN sudo apt-add-repository ppa:chris-lea/redis-server
 RUN apt-get update
 RUN apt-get -y install redis-server 
 
-
-RUN /etc/init.d/redis-server start
+RUN sleep 30s && /etc/init.d/redis-server start
 # Add and install Python modules
 RUN mkdir -p /src
 RUN pip install flask==0.9
